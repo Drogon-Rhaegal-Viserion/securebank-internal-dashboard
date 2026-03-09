@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Account Overview</h2>
+<p>Balance: <strong>${{ balance }}</strong></p>
+<h3>Transactions</h3>
+<ul>
+    {% for t in transactions %}
+    <li>{{ t }}</li>
+    {% else %}
+    <li>No transactions yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
